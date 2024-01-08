@@ -12,16 +12,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModels\FriendsListViewModel.cs" />
+    <Compile Remove="ViewModels\FriendViewModel.cs" />
+    <Compile Remove="Views\FriendPage.xaml.cs" />
+    <Compile Remove="Views\FriendsListPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\FriendPage.xaml" />
+    <EmbeddedResource Remove="Views\FriendsListPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\FriendPage.xaml">
+    <EmbeddedResource Update="Views\DBFriendPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\FriendsListPage.xaml">
+    <EmbeddedResource Update="Views\DBListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>
