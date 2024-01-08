@@ -8,7 +8,7 @@ namespace MVVM_app.Models
     [Table("Friends")]
     public class Friend
     {
-        [PrimaryKey, AutoIncrement, Column("ID")]
+        [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
